@@ -1,584 +1,601 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800&display=swap');
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Inter", sans-serif;
+    font-family: 'Heebo', sans-serif;
 }
 
 a{
     text-decoration: none;
-}
-
-button{
-    cursor: pointer;
+    color: #000;
 }
 
 img{
     object-fit: cover;
-}
-
-h2{
-    font-weight: 400;
+    object-position: top;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 nav{
+    padding: 20px 148px;
+    background-color: #fff;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 32px;
-    border: 1px solid #e8e8e8;
-    position: absolute;
-    top: 16px;
-    left: 50%;
-    transform: translateX(-50%);
-    border-radius: 16px;
-    padding: 12px;
+    font-weight: 600;
 }
 
 nav .logo{
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 10px;
 }
 
 nav .logo img{
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
 }
 
 nav .logo a{
-    color: #000;
-    font-weight: 600;
+    font-size: 15px;
+    color: #3e3e3e;
+    font-weight: bold;
 }
 
 nav .nav-links{
     display: flex;
-    gap: 24px;
+    gap: 16px;
 }
 
 nav .nav-links a{
-    font-size: 14px;
-    color: #606060;
-    transition: all 0.3s ease;
+    transition: color 0.3s ease;
 }
 
-nav .nav-links a:hover{
-    color: #000;
+nav .nav-links a:hover,
+nav .nav-links a.selected{
+    color: #303f9f;
 }
 
-nav button{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 3px;
-    font-size: 14px;
-    height: 32px;
-    width: 122px;
-    background: #000;
-    color: #fff;
-    border-radius: 8px;
-    border: 1px solid transparent;
-    transition: all 0.3s ease;
-}
-
-nav button:hover,
-.hero .left-section .top .buttons button.doc:hover,
-.contact .items .item button:hover{
-    color: #000;
-    background: #fff;
-    border-color: #dedede;
-}
-
-nav button i{
-    font-size: 20px;
-}
-
-.hero{
-    margin-top: 80px;
-    height: calc(100vh - 80px);
-    padding: 0 60px;
+.main {
+    padding: 0 148px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 30px;
+    gap: 50px;
+    height: calc(100vh - 80px);
 }
 
-.hero > img{
-    max-width: 520px;
-    width: 44%;
-    border-radius: 26px;
-}
-
-.hero .left-section{
-    display: flex;
-    flex-direction: column;
-    gap: 100px;
-}
-
-.hero .left-section .top h2{
+.main .info h1{
     font-size: 44px;
-    margin-bottom: 24px;
+    margin-bottom: 40px;
 }
 
-.hero .left-section .top p{
-    color: #606060;
-    font-size: 18px;
-    margin-bottom: 24px;
-    text-align: justify;
-}
-
-.hero .left-section .top .buttons{
-    display: flex;
-    gap: 8px;
-}
-
-.hero .left-section .top .buttons button,
-.projects .inner > button,
-.contact .items .item button{
+.main .info p{
     font-size: 16px;
+    margin-bottom: 45px;
+    width: 100%;
+}
+
+.main .info button,
+.content .post-list .post-item .buttons button{
+    padding: 10px 30px;
+    background: #303f9f;
     border: none;
-    padding: 5px 20px;
-    background: #fff;
-    border: 1px solid #dedede;
+    color: #fff;
+    font-size: 16px;
     border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-    font-weight: 500;
-    transition: all 0.3s ease;
-}
-
-.hero .left-section .top .buttons button i{
-    font-size: 26px;
-}
-
-.hero .left-section .top .buttons button.doc,
-.contact .items .item button{
-    background: #000;
-    color: #fff;
-}
-
-.hero .left-section .top .buttons button.git:hover{
-    background: #000;
-    color: #fff;
-    border-color: transparent;
-}
-
-.hero .left-section .bottom p{
-    font-size: 14px;
-    color: #606060;
-    margin-bottom: 10px;
-}
-
-.hero .left-section .bottom .icons{
-    margin-left: 10px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 20px;
     cursor: pointer;
-    width: fit-content;
+    transition: background 0.3s ease;
 }
 
-.about{
+.main .info button:hover,
+.content .post-list .post-item .buttons button:hover{
+    background: #1a237e;
+}
+
+.main img{
+    width: 400px;
+    height: 400px;
+    border-radius: 140px;
+}
+
+.recent{
+    padding: 60px 148px;
+    background-color: #dbedf2;
+}
+
+.recent .header{
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    background: #f5f5f5;
-    padding: 50px;
-}
-
-.about > p{
-    font-size: 14px;
-    color: #606060;
-    border: 1px solid #e8e8e8;
-    padding: 6px 14px;
-    border-radius: 16px;
-    margin-bottom: 12px;
-    background: #fff;
-}
-
-.about > h2{
-    font-size: 22px;
-    text-align: center;
+    justify-content: space-between;
     margin-bottom: 30px;
 }
 
-.about .items{
+.recent .header h4,
+.separator h4{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.recent .header a{
+    color: #303f9f;
+}
+
+.recent .posts{
     display: flex;
     justify-content: center;
-    gap: 24px;
-}
-
-.about .items .item{
-    width: 26%;
-    border: 1px solid #e8e8e8;
-    border-radius: 16px;
-    background: #f1f1f1;
-    padding: 0 0 30px;
-}
-
-.about .items .item .inner{
-    background: #fff;
-    padding: 24px;
-    border-radius: 16px;
-    border: 1px solid #e8e8e8;
-    min-height: 365px;
-}
-
-.about .items .item .inner img{
-    width: 100%;
-    margin-bottom: 16px;
-    border-radius: 12px;
-}
-
-.about .items .item .inner a{
-    font-size: 18px;
-    color: #000;
-    margin-bottom: 10px;
-    display: block;
-}
-
-.about .items .item .inner p{
-    color: #606060;
-    font-size: 15px;
-}
-
-.projects{
-    padding: 0 24px;
-    background: #f5f5f5;
-}
-
-.projects .inner{
-    background: #1f1f1f;
-    color: #fff;
-    padding: 70px;
-    border-radius: 24px;
-}
-
-.projects .inner p.debug{
-    font-size: 14px;
-    margin-bottom: 12px;
-    color: #d8d8d8;
-    border: 1px solid #484848;
-    display: inline-block;
-    padding: 6px 12px;
-    border-radius: 20px;
-}
-
-.projects .inner p.debug i,
-.projects .inner > button i{
-    font-size: 18px;
-}
-
-.projects .inner > h2{
-    font-size: 38px;
-    margin-bottom: 24px;
-}
-
-.projects .inner p.info{
-    font-size: 18px;
-    color: #dedede;
-    margin-bottom: 24px;
-}
-
-.projects .inner > button{
-    padding: 10px 20px;
-    margin-bottom: 40px;
-}
-
-.projects .inner .items{
-    display: flex;
     gap: 20px;
 }
 
-.projects .inner .items .item{
-    border: 1px solid #484848;
-    border-radius: 16px;
-    padding: 32px 24px;
-    height: 250px;
-    width: 24%;
-    background: #262626;
+.recent .posts .post-item{
+    background-color: #fff;
+    padding: 24px;
+    width: 460px;
 }
 
-.projects .inner .items .item i{
-    font-size: 38px;
-    border: 1px solid #606060;
-    border-radius: 10px;
-    padding: 10px;
-    background: #303030;
+.recent .posts .post-item h3,
+.content .post-list .post-item h3{
+    font-size: 26px;
+    margin-bottom: 18px;
 }
 
-.projects .inner .items .item a{
-    display: block;
-    margin: 24px 0 14px;
-    color: #fff;
-    font-size: 20px;
-}
-
-.projects .inner .items .item p{
-    color: #a1a1a1;
-    font-size: 16px;
-    line-height: 24px;
-}
-
-.contact{
-    padding: 100px 60px;
-    background: #f5f5f5;
-}
-
-.contact > h2{
-    font-size: 36px;
-    margin-bottom: 40px;
-}
-
-.contact .items{
+.recent .posts .post-item .info,
+.content .post-list .post-item .info{
     display: flex;
-    background: #fff;
-    border-radius: 12px;
+    gap: 10px;
+    margin-bottom: 10px;
 }
 
-.contact .items .item{
-    width: 50%;
-    padding: 30px;
-    border: 1px solid #dedede;
+.recent .posts .post-item .info h5,
+.content .post-list .post-item h5{
+    font-size: 18px;
+    font-weight: 400;
 }
 
-.contact .items .item:nth-child(1){
-    border-radius: 12px 0 0 12px;
+.recent .posts .post-item p{
+    width: 400px;
 }
 
-.contact .items .item:nth-child(2){
-    border-radius: 0 12px 12px 0;
+.separator{
+    padding: 40px 148px 0;
 }
 
-.contact .items .item a{
-    font-size: 24px;
-    color: #000;
-    display: inline-block;
+.separator h4{
+    margin-bottom: 30px;
+}
+
+.featured{
+    padding: 40px 290px 0;
+}
+
+.featured .item,
+.works-list .item{
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.featured .item img,
+.works-list .item img{
+    width: 320px;
+    height: 200px;
+    border-radius: 6px;
+}
+
+.featured .item .details h3,
+.works-list .item h3{
+    font-size: 30px;
     margin-bottom: 16px;
 }
 
-.contact .items .item p{
-    font-size: 20px;
-    color: #606060;
-    margin-bottom: 26px;
+.featured .item .details .item-info,
+.works-list .item .details .item-info{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
 }
 
-.contact .items .item button{
-    padding: 10px 24px;
+.featured .item .details .item-info .year-badge,
+.works-list .item .details .item-info .year-badge,
+.content .work-info .year-badge{
+    background-color: #303f9f;
+    padding: 2px 14px;
+    color: #fff;
+    border-radius: 16px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.featured .item .details .item-info h4,
+.works-list .item .details .item-info h4{
+    color: #8695a4;
+    font-size: 18px;
+}
+
+.featured .item .details p,
+.works-list .item .details p{
+    width: 700px;
+    text-align: justify;
 }
 
 footer{
-    background: #1f1f1f;
-    border-radius: 24px 24px 0 0;
-    padding: 30px;
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer .socials{
     display: flex;
     align-items: center;
-    justify-content: center;
+    gap: 28px;
+    margin-bottom: 20px;
+}
+
+footer .socials i{
+    font-size: 40px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+footer .socials i:hover{
+    color: #303f9f;
+}
+
+footer p{
+    font-size: 14px;
+}
+
+.page-title{
+    padding: 80px 234px 20px;
+    width: 100%;
+}
+
+.content{
+    padding: 30px 148px 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content .work-info{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    width: 970px;
+}
+
+.content .work-info .category{
+    color: #8695a4;
+    font-size: 18px;
+}
+
+.content>p{
+    width: 970px;
+    font-size: 15px;
+    margin: 20px 0;
+}
+
+.content>img{
+    width: 970px;
+    margin: 30px 0;
+    border-radius: 20px;
+}
+
+.content>h1,
+.content>h2,
+.content>h3{
+    width: 970px;
+}
+
+.content .post-list{
+    display: flex;
+    flex-direction: column;
     gap: 20px;
 }
 
-footer p,
-footer a{
-    font-size: 13px;
-    color: #606060;
-    transition: all 0.3s ease;
+.content .post-list .post-item{
+    background-color: #dbedf2;
+    padding: 24px;
+    width: 960px;
+    border-radius: 10px;
 }
 
-footer a:hover{
-    color: #fff;
+.content .post-list .post-item .buttons{
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
 }
 
-@media screen and (max-width: 1280px) {
+.content .post-list .post-item .buttons button{
+    font-size: 14px;
+    padding: 6px 20px;
+}
+
+.content .post-list .post-item .buttons i{
+    font-size: 22px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.content .post-list .post-item .buttons i:hover{
+    color: #303f9f;
+}
+
+.content .container{
+    background-color: #dbedf2;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    width: 970px;
+    border-radius: 20px;
+}
+
+.content .container img{
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+}
+
+.content .container h2{
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+.content .container .about>p{
+    text-align: justify;
+}
+
+.content .container .about .email{
+    font-weight: bold;
+    margin-top: 30px;
+    font-size: 14px;
+}
+
+@media screen and (max-width: 1400px) {
     
-    .hero .left-section .top h2{
-        font-size: 25px;
+    nav{
+        padding: 20px 60px;
     }
 
-    .hero .left-section .top p{
+    .main{
+        padding: 0 60px;
+    }
+
+    .recent{
+        padding: 60px;
+    }
+
+    .featured,
+    .separator{
+        padding: 40px 60px 0;
+    }
+
+    .page-title{
+        padding: 80px 60px 20px;
+    }
+
+}
+
+@media screen and (max-width: 1200px) {
+    
+    nav{
+        padding: 20px 40px;
+    }
+
+    .main{
+        padding: 0 40px;
+    }
+
+    .main img{
+        width: 340px;
+        height: 340px;
+    }
+
+    .recent{
+        padding: 40px;
+    }
+
+    .featured,
+    .separator{
+        padding: 40px 40px 0;
+    }
+
+    .featured .item .details p,
+    .works-list .item .details p{
+        width: 100%;
+    }
+
+    .page-title{
+        padding: 80px 40px 20px;
+    }
+
+    .content .work-info,
+    .content>p,
+    .content>img,
+    .content>h1,
+    .content>h2,
+    .content>h3,
+    .content .post-list .post-item,
+    .content .container{
+        width: 100%;
+    }
+
+    .content .container img{
+        width: 250px;
+        height: 250px;
+    }
+
+    .content .container h2{
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .content .container .about>p{
         font-size: 14px;
-    }
-
-    .hero .left-section .top .buttons button,
-    .projects .inner > button,
-    .contact .items .item button{
-        font-size: 14px;
-        padding: 8px 14px;
-    }
-
-    .hero .left-section .top .buttons button i{
-        font-size: 18px;
-    }
-
-    .about .items .item .inner{
-        min-height: 340px;
-    }
-
-    .about .items .item .inner a,
-    .projects .inner > p.info,
-    .contact .items .item p{
-        font-size: 15px;
-    }
-
-    .about .items .item .inner p{
-        font-size: 13px;
-    }
-
-    .projects .inner .items{
-        flex-wrap: wrap;
-    }
-
-    .projects .inner .items .item{
-        width: 46%;
-        height: 220px;
-    }
-
-    .contact .items .item a{
-        font-size: 18px;
     }
 
 }
 
 @media screen and (max-width: 992px) {
     
-    .hero{
-        margin-top: 100px;
-        flex-direction: column;
-        justify-content: center;
-        height: calc(100vh - 100px);
+    nav{
+        padding: 20px;
     }
 
-    .hero .left-section{
-        gap: 20px;
-        align-items: center;
+    .main{
+        padding: 0 20px;
     }
 
-    .hero .left-section .top{
-        text-align: center;
+    .main img{
+        width: 300px;
+        height: 300px;
     }
 
-    .hero .left-section .top .buttons{
-        justify-content: center;
+    .main .info h1{
+        font-size: 34px;
     }
 
-    .about .items{
-        flex-wrap: wrap;
+    .main .info p{
+        font-size: 15px;
     }
 
-    .about .items .item{
-        width: 40%;
+    .main .info button{
+        font-size: 15px;
+        padding: 8px 22px;
     }
 
-    .projects .inner .items .item{
-        height: 250px;
+    .recent{
+        padding: 40px 20px;
     }
 
-    .contact .items .item button{
+    .recent .posts .post-item{
         width: 100%;
+    }
+
+    .recent .posts .post-item h3,
+    .content .post-list .post-item h3{
+        font-size: 20px;
+    }
+
+    .recent .posts .post-item .info h5,
+    .content .post-list .post-item .info h5{
+        font-size: 14px;
+    }
+
+    .recent .posts .post-item p{
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .featured,
+    .separator{
+        padding: 40px 20px 0;
+    }
+
+    .featured .item,
+    .works-list .item{
+        flex-direction: column;
+        padding: 0 20px 30px;
+    }
+
+    .featured .item img,
+    .works-list .item img{
+        width: 100%;
+        height: auto;
+    }
+
+    .featured .item .details h3,
+    .works-list .details .item h3{
+        font-size: 24px;
+        margin-bottom: 12px;
+    }
+
+    .featured .item .details .item-info .year-badge,
+    .works-list .item .details .item-info .year-badge{
+        font-size: 12px;
+    }
+
+    .featured .item .details .item-info h4,
+    .works-list .item .details .item-info h4{
+        font-size: 15px;
+    }
+
+    .featured .item .details p,
+    .works-list .item .details p{
+        font-size: 14px;
+    }
+
+    .content{
+        padding: 30px 20px 60px;
+    }
+
+    .content .container h2{
+        font-size: 20px;
+    }
+
+    .content .container .about>p{
+        font-size: 13px;
     }
 
 }
 
 @media screen and (max-width: 768px) {
     
-    nav,
-    nav .nav-links{
-        gap: 16px;
+    nav{
+        justify-content: center;
     }
 
-    nav button{
+    nav .logo{
         display: none;
     }
 
-    .hero{
-        padding: 0 40px;
+    .main{
+        flex-direction: column;
+        justify-content: space-around;
+        margin: 40px 0;
+        height: auto;
     }
 
-    .hero > img{
-        width: 55%;
+    .main .info h1{
+        font-size: 30px;
+        margin-bottom: 16px;
     }
 
-    .about > h2{
-        font-size: 18px;
+    .main .info p{
+        margin-bottom: 16px;
     }
 
-    .about .items .item{
-        width: 100%;
-    }
-
-    .about .items .item .inner img{
-        height: 65%;
-        max-height: 250px;
-    }
-
-    .projects .inner{
-        padding: 50px 40px;
-    }
-
-    .projects .inner > h2{
-        font-size: 24px;
-    }
-
-    .projects .inner p.info{
+    .main .info button{
+        padding: 6px 20px;
         font-size: 13px;
     }
 
-    .projects .inner button{
+    .main img{
+        margin-top: 20px;
         width: 100%;
+        height: auto;
+        border-radius: 50px;
     }
 
-    .projects .inner .items .item{
+    .recent .posts,
+    .content .container{
+        flex-direction: column;
+    }
+
+    .content .container img{
         width: 100%;
-        height: 170px;
-    }
-
-    .projects .inner .items .item i{
-        font-size: 28px;
-    }
-
-    .projects .inner .items .item a{
-        display: inline-block;
-        margin-left: 10px;
-        font-size: 16px;
-    }
-
-    .projects .inner .items .item p{
-        margin-top: 10px;
-        font-size: 14px;
-    }
-
-    .contact{
-        padding: 100px 40px;
-    }
-
-    .contact > h2{
-        font-size: 22px;
-    }
-
-    .contact .items{
-        flex-wrap: wrap;
-    }
-
-    .contact .items .item{
-        width: 100%;
-    }
-
-    .contact .items .item:nth-child(1){
-        border-radius: 12px 12px 0 0;
-    }
-
-    .contact .items .item:nth-child(2){
-        border-radius: 0 0 12px 12px;
-    }
-
-    footer a,
-    footer p{
-        font-size: 11px;
+        height: auto;
     }
 
 }
