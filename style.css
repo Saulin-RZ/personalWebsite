@@ -45,6 +45,12 @@ nav .logo a{
     font-weight: bold;
 }
 
+.disabled-link {
+    pointer-events: none;
+    color: gray; /* Optional: Change color to indicate it's disabled */
+    cursor: default; /* Optional: Change cursor to default */
+}
+
 nav .nav-links{
     display: flex;
     gap: 16px;
