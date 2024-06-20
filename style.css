@@ -605,3 +605,58 @@ footer p{
     }
 
 }
+
+
+
+.download-button {
+    display: inline-block;
+    padding: 5px 15px;
+    background: #303f9f;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.download-button i {
+    margin-right: 4px; /* Adjust spacing between icon and text */
+}
+
+.download-button-android {
+    background-color: #4CAF50; /* Green for Android */
+}
+
+.download-button-android:hover {
+    background-color: #45a049;
+}
+
+.download-button-android:active {
+    background-color: #3d8b40;
+}
+
+.download-button-windows {
+    background-color: #303f9f; /* Blue for Windows */
+}
+
+.download-button-windows:hover {
+    background-color: #1a237e;
+}
+
+.download-button-windows:active {
+    background-color: #303f9f;
+}
+
+
+.download-button-github {
+    background-color: #181717; /* Blue for Windows */
+}
+
+.download-button-github:hover {
+    background-color: #6e5494;
+}
+
+.download-button-github:active {
+    background-color: #181717;
+}
