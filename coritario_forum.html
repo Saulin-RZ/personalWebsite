@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>Coritario | SRZ</title>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">
+            <img src="assets/logo.png">
+            <a href="#">Saúl Ramírez Zavala</a>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <!-- Forum link can be accessed externally -->
+        </div>
+    </nav>
+
+    <h1 class="page-title">Coritario Forum</h1>
+
+    <div class="content">
+        <div class="post-list" id="post-list">
+            <!-- Existing posts will be dynamically added here -->
+        </div>
+
+        <form id="issue-form">
+            <div class="form-column">
+                <label for="issue-title">Issue/Request:</label>
+                <input type="text" id="issue-title" name="issue-title" required>
+                
+                <label for="issue-tags">Tags:</label>
+                <select id="issue-tags" name="issue-tags">
+                    <option value="Bug">Bug</option>
+                    <option value="Ortography">Ortography</option>
+                    <option value="Lirycs">Lirycs</option>
+                    <option value="Chords">Chords</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            
+            <div class="form-column">
+                <label for="issue-description">Description:</label>
+                <textarea id="issue-description" name="issue-description" rows="3" style="resize: vertical;" required></textarea>
+                
+                <button type="submit">Submit Issue/Request</button>
+            </div>
+        </form>
+        
+        
+        
+    </div>
+
+    <footer>
+        <div class="socials">
+            <a href="https://www.facebook.com/saul.ramirezzavala.7" target="_blank">
+                <i class='bx bxl-facebook-square'></i>
+            </a>
+            <a href="https://www.instagram.com/saulin_rz/" target="_blank">
+                <i class='bx bxl-instagram'></i>
+            </a>
+            <a href="https://github.com/Saulin-RZ" target="_blank">
+                <i class='bx bxl-github'></i>
+            </a>
+        </div>
+        <p>Copyright ©2024, All rights reserved.</p>
+    </footer>
+
+    <script src="coritario_forum_script.js"></script> <!-- Add script.js for JavaScript logic -->
+</body>
+
+</html>
