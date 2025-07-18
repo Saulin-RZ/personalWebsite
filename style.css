@@ -661,6 +661,18 @@ footer p{
     background-color: #181717;
 }
 
+.download-button-webapp {
+	background-color: #181717; /* Blue for Windows */
+}
+
+.download-button-webapp:hover {
+    background-color: #6e5494;
+}
+
+.download-button-webapp:active {
+    background-color: #181717;
+}
+
 
 
 /* style.css */
